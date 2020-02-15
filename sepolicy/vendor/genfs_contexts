@@ -47,3 +47,17 @@ genfscon sysfs /devices/platform/soc/8300000.qcom,turing/subsys6/restart_level  
 genfscon sysfs /devices/platform/soc/aae0000.qcom,venus/subsys1/restart_level                                                           u:object_r:sysfs_ssr_toggle:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,ipa_fws/subsys2/restart_level                                                             u:object_r:sysfs_ssr_toggle:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,kgsl-hyp/subsys3/restart_level                                                            u:object_r:sysfs_ssr_toggle:s0
+
+## Zenparts Nodes ##
+
+# Earpiece gain
+genfscon sysfs /kernel/sound_control/earpiece_gain                                       u:object_r:sysfs_egain:s0
+
+# Headphone gain
+genfscon sysfs /kernel/sound_control/headphone_gain                                      u:object_r:sysfs_hgain:s0
+
+# Microphone gain
+genfscon sysfs /kernel/sound_control/mic_gain                                            u:object_r:sysfs_mgain:s0
+
+# USB force fastcharge
+genfscon sysfs /kernel/fast_charge/force_fast_charge                                     u:object_r:sysfs_fcharge:s0

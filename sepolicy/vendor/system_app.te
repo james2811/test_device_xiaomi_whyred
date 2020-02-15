@@ -12,6 +12,12 @@ allow system_app sysfs_kgsl:dir { search };
 
 add_service(system_app, goodix_fingerprint_service)
 
+get_prop(system_app, spectrum_prop);
+allow system_app camera_prop:property_service set;
+get_prop(system_app, camera_prop);
+allow system_app sysfs_leds:dir search;
+allow system_app fm_prop:property_service set;
+
 ## ZenParts ##
 allow system_app sysfs_backlight:file { open read getattr write };
 allow system_app sysfs_egain:file { open read getattr write };
